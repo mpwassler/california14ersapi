@@ -7,6 +7,6 @@ Sample sql dump of data is included
 
 Add folder to the src directory in your $GOPATH 
 
-go build main.go
+`go build main.go`
 
-./main.go
+`./main.go`
