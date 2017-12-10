@@ -15,11 +15,11 @@ runs on `localhost:8005`
 
 An API for quering the 14k foot peaks in California and their most will known routes. Endpoints include:
 
-### `/mountains`
+### `GET: /mountains`
 get all 14ers
 
-### `/mountains/{id}`
+### `GET: /mountains/{id}`
 get a specific 14er by id
 
-### `/mountains/{id}/routes`
+### `GET: /mountains/{id}/routes`
 get all routes for a specific 14er
