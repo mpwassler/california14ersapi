@@ -4,7 +4,7 @@ import (
 "net/http"
 "encoding/json"
 "fmt"
-"goapi/model"
+"california14ersapi/model"
 )
 
 type MountainController struct {}

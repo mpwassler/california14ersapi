@@ -7,7 +7,7 @@ import(
 "encoding/json"
 // "encoding/json"
 
-"goapi/model"
+"california14ersapi/model"
 )
 
 type RouteController struct {}

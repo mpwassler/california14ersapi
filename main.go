@@ -4,8 +4,8 @@ import(
 "net/http"
 "fmt"
 "log"
-"goapi/controller"
-"goapi/model"
+"california14ersapi/controller"
+"california14ersapi/model"
 "database/sql"
  _ "github.com/go-sql-driver/mysql"
 )
