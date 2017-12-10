@@ -14,7 +14,7 @@ type Mountain struct {
 	Elevation int `json:"elevation"`
 	Lat float64 `json:"latitude"`
 	Lng float64 `json:"longitude"`
-	Routes []Route `json:"routes"`
+	Routes []Route `json:"routes,omitempty"`
 }
 
 type MountainRepository struct {}
@@ -31,7 +31,6 @@ func (m MountainRepository) GetAll() ([]Mountain) {
 		row := Mountain{}
 		err := rows.Scan(&row.Id, &row.Name, &row.Elevation, &row.Lat, &row.Lng)
 		handleError(err)
-		row.Routes = routeRepository.GetRoutesByMountain(row.Id)
 		results = append(results, row)
 	}
 	err = rows.Err()
@@ -48,7 +47,6 @@ func (m MountainRepository) FindById(id int) Mountain {
 		WHERE id = ?
 	`, id)
 	err := row.Scan(&result.Id, &result.Name, &result.Elevation, &result.Lat, &result.Lng)
-	result.Routes = routeRepository.GetRoutesByMountain(result.Id)
 	handleError(err)
 	fmt.Println(result)
 	return result
